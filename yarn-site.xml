@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>yarn.resourcemanager.resource-tracker.address</name>
+    <value>resourcemanager:8031</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.address</name>
+    <value>resourcemanager:8034</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services</name>
+    <value>httpshuffle</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.aux-services.httpshuffle.class</name>
+    <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+  </property>
+  <property>
+    <name>yarn.nodemanager.resource.memory-mb</name>
+    <value>4096</value>
+  </property>
+  <!-- Add these properties -->
+  <property>
+    <name>yarn.resourcemanager.proxyuser.hue.hosts</name>
+    <value>*</value>
+  </property>
+  <property>
+    <name>yarn.resourcemanager.proxyuser.hue.groups</name>
+    <value>*</value>
+  </property>
+</configuration>

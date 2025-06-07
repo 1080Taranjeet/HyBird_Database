@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>yarn.scheduler.capacity.root.queues</name>
+    <value>queue1,queue2</value>  # Define two queues
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.root.queue1.capacity</name>
+    <value>50</value>  # 50% capacity for queue1
+  </property>
+  <property>
+    <name>yarn.scheduler.capacity.root.queue2.capacity</name>
+    <value>50</value>  # 50% capacity for queue2
+  </property>
+</configuration>

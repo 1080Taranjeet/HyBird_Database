@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <property>
+    <name>dfs.replication</name>
+    <value>1</value>  # Single replica (one datanode)
+  </property>
+  <property>
+    <name>dfs.namenode.name.dir</name>
+    <value>/hadoop/dfs/name</value>  # Namenode data directory
+  </property>
+  <property>
+    <name>dfs.datanode.data.dir</name>
+    <value>/hadoop/dfs/data</value>  # Datanode data directory
+  </property>
+  <property>
+    <name>dfs.namenode.datanode.registration.ip-hostname-check</name>
+    <value>false</value>  # Disable IP/hostname check
+  </property>
+  <property>
+    <name>dfs.webhdfs.enabled</name>
+    <value>true</value>  # Enable WebHDFS
+  </property>
+</configuration>

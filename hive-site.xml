@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+<configuration>
+  <!-- Metastore connection details -->
+  <property>
+    <name>javax.jdo.option.ConnectionURL</name>
+    <value>jdbc:postgresql://hive-metastore-postgresql:5432/metastore</value>
+    <!-- PostgreSQL URL -->
+  </property>
+  <property>
+    <name>hive.server2.thrift.port</name>
+    <value>10000</value>
+    <!-- HiveServer2 Thrift port -->
+  </property>
+  <property>
+    <name>hive.server2.thrift.bind.host</name>
+    <value>0.0.0.0</value>
+    <!-- Bind to all interfaces -->
+  </property>
+  <property>
+    <name>hive.server2.transport.mode</name>
+    <value>binary</value>
+    <!-- Binary transport mode -->
+  </property>
+  <property>
+    <name>hive.server2.authentication</name>
+    <value>NONE</value>
+    <!-- No SASL authentication -->
+  </property>
+  <property>
+    <name>hive.server2.enable.doAs</name>
+    <value>true</value>
+    <!-- Disable doAs -->
+  </property>
+  <property>
+    <name>hive.server2.allow.user.substitution</name>
+    <value>true</value>
+    <!-- Allow user substitution -->
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionDriverName</name>
+    <value>org.postgresql.Driver</value>
+    <!-- PostgreSQL driver -->
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionUserName</name>
+    <value>hive</value>
+    <!-- Metastore username -->
+  </property>
+  <property>
+    <name>javax.jdo.option.ConnectionPassword</name>
+    <value>hive</value>
+    <!-- Metastore password -->
+  </property>
+  <property>
+    <name>hive.metastore.uris</name>
+    <value>thrift://hive-metastore:9083</value>
+    <!-- Metastore URI -->
+  </property>
+  <!-- Warehouse directory in HDFS -->
+  <property>
+    <name>hive.metastore.warehouse.dir</name>
+    <value>hdfs://namenode:8020/user/hive/warehouse</value>
+    <!-- Hive warehouse in HDFS -->
+  </property>
+  <property>
+  <name>hive.txn.manager</name>
+  <value>org.apache.hadoop.hive.ql.lockmgr.DbTxnManager</value>
+</property>
+
+<property>
+  <name>hive.support.concurrency</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>hive.compactor.initiator.on</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>hive.compactor.worker.threads</name>
+  <value>1</value>
+</property>
+
+<property>
+  <name>hive.enforce.bucketing</name>
+  <value>true</value>
+</property>
+
+<property>
+  <name>hive.exec.dynamic.partition.mode</name>
+  <value>nonstrict</value>
+</property>
+
+
+<property>
+    <name>hive.execution.engine</name>
+    <value>spark</value>
+</property>
+<property>
+    <name>spark.master</name>
+    <value>spark://spark-master:7077</value>
+</property>
+
+</configuration>
